@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="caixa">
+
+        <header>
+            <div>
+                <h1>Caixa Eletrônico</h1>
+                <p>Terminal de autoatendimento</p>
+            </div>
+
+            <span id="status">Descanso nessa porra</span>
+        </header>
+
+        <main>
+
+            <section id="telaInicial">
+                <h2>Bem-vindo!</h2>
+                <p>Insira seu cartão para começar a utilizar o caixa eletrônico.</p>
+
+                <button onclick="inserixerecard()">
+                    Inserir cartão
+                </button>
+            </section>
+
+            <section id="telaCaixa" class="escondido">
+
+                <div class="saldo">
+                    <p>Saldo disponível</p>
+                    <h2 id="saldo">R$ 1.500,00</h2>
+                </div>
+
+                <h3>Escolha uma operação</h3>
+
+                <div class="botoes">
+                    <button onclick="consultarmalote()">
+                        Consultar saldo
+                    </button>
+
+                    <button onclick="mostrarSaka()">
+                        Realizar saque
+                    </button>
+
+                    <button onclick="mostrarpataco()">
+                        Realizar depósito
+                    </button>
+                </div>
+
+                <div id="areaSaque" class="operacao escondido">
+                    <h3>Realizar saque</h3>
+
+                    <label>Digite o valor do saque:</label>
+                    <input type="number" id="valorSaque" placeholder="Ex: 100">
+
+                    <button onclick="Saka()">
+                        Continuar
+                    </button>
+
+                    <button class="secundario" onclick="desisti()">
+                        Voltar
+                    </button>
+                </div>
+
+                <div id="areaDeposito" class="operacao escondido">
+                    <h3>Realizar depósito</h3>
+
+                    <label>Digite o valor do depósito:</label>
+                    <input type="number" id="valorDeposito" placeholder="Ex: 200">
+
+                    <button onclick="depois()">
+                        Continuar
+                    </button>
+
+                    <button class="secundario" onclick="desisti()">
+                        Voltar
+                    </button>
+                </div>
+
+                <div id="confirmacao" class="operacao escondido">
+                    <h3>Confirmar operação</h3>
+
+                    <p id="mensagemConfirmacao"></p>
+
+                    <button onclick="rocinha()">
+                        Confirmar
+                    </button>
+
+                    <button class="secundario" onclick="policia()">
+                        Cancelar
+                    </button>
+                </div>
+
+                <div id="mensagem" class="mensagem">
+                    Cartão inserido. Escolha uma operação.
+                </div>
+
+                <p class="contador">
+                    Operações realizadas: <span id="contador">0</span>
+                </p>
+
+                <button class="retirar" onclick="goze()">
+                    Retirar cartão e encerrar
+                </button>
+
+            </section>
+
+        </main>
+
+        <footer>
+           Bricadeira de criança — ESSA PORRA NÃO É REAL CARALHO
+        </footer>
+
+    </div>
+
+    <script src="meta.js"></script>
+
+</body>
+</html>
